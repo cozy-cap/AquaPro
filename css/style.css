@@ -1,0 +1,226 @@
+/*from internet*/
+* {
+    box-sizing: border-box;
+}
+/*-------------------------*/
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    "heading"
+    "main"
+    "footer";
+    margin: 0px;
+    min-height: 100vh;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12pt;
+    background: #2c2c2c;
+    color: #333;
+}
+header {
+    grid-area: heading;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, auto) 1fr auto auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". logo catalog search cart profile-button .";
+    place-items: center;
+    gap: 10px;
+    padding: 0px 20px;
+    background: #333;
+    border-bottom: solid #59a3d4;
+    align-content: center;
+}
+.header-logo {
+    grid-area: logo;
+    max-width: fit-content;
+}
+#logo-link {
+    text-decoration: none;
+}
+#logo-link h1 {
+    font-family: "Tilt Warp", sans-serif;
+    font-size: 35px;
+    color: #59a3d4;
+    margin: 0px;
+    text-align: center;
+    white-space: nowrap;
+}
+#logo-link h1:hover {
+    color: #63acdd;
+}
+
+.catalog {
+    grid-area: catalog;
+}
+.catalog div {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.catalog div:hover {
+    background: #474747;
+}
+.catalog div p {
+    font-size: 16pt;
+    color: #eeeeee;
+    margin: 0px;
+    margin-left: 5px;
+}
+.search {
+    grid-area: search;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "search-input submit";
+    height: 40px;
+    width: 100%;
+}
+#search-input {
+    grid-area: search-input;
+    font-size: 14pt;
+    padding-left: 10px;
+    border-style: none;
+    border-radius: 10px 0px 0px 10px;
+    border: solid #59a3d400 2px;
+    vertical-align: bottom;
+    color: #333;
+    background: #eeeeee;
+}
+#search-input:focus {
+    border: solid #59a3d4 2px;
+    outline: none;
+}
+#submit {
+    grid-area: submit;
+    width: 40px;
+    border-radius: 0px 10px 10px 0px;
+    color: #333;
+    background: #59a3d4;
+    border-style: none;
+    cursor: pointer;
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    vertical-align: bottom;
+}
+#submit:hover {
+    background: #67b2e4;
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.cart {
+    grid-area: cart;
+    max-width: fit-content;
+}
+#cart-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border-style: none;
+    border-radius: 10px;
+}
+#cart-button svg {
+    stroke: #eeeeee;
+    fill: none;
+}
+#cart-button:hover {
+    background: #474747;
+}
+.profile-button {
+    grid-area: profile-button;
+    max-width: fit-content;
+    padding: 0px;
+    margin: 0px;
+}
+#profile-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-image: url(../image/profile-image.jpg);
+    border-radius: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+main {
+    grid-area: main;
+    display: grid;
+}
+
+#banner-image {
+    mask-image: linear-gradient(to bottom, #fff, #ffffff00);
+}
+#go-up svg{
+    fill: #333;
+    background: #59a3d4;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.go-up {
+    width: 50px;
+    margin: auto 10px 10px auto;
+}
+footer {
+    grid-area: footer;
+    color: #818181;
+    padding: 10px 10%;
+    width: 100%;
+    background: #333;
+    border-top: 2px solid #59a3d4;
+    height: 100px;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "footer-top ."
+    ". footer-bottom";
+    place-items: center;
+    column-gap: 20%;
+}
+.footer-top {
+    grid-area: footer-top;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "footer-logo links";
+    align-items: center;
+    column-gap: 20%;
+}
+.footer-bottom {
+    grid-area: footer-bottom;
+    max-width: fit-content;
+}
+.footer-logo {
+    grid-area: footer-logo;
+    max-width: fit-content;
+}
+#about-foot-logo {
+    margin: auto;
+    text-align: center;
+    font-family: "Tilt Warp", sans-serif;
+    text-decoration: none;
+    color: #396a8b;
+    font-size: 20pt;
+    white-space: nowrap;
+}
+.links {
+    grid-area: links;
+}
+.copyright {
+    grid-area: copyright;
+    max-width: fit-content;
+    white-space: nowrap;
+    margin: 0px;
+}
+#copyright {
+    margin: 0px;
+}
