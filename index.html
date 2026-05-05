@@ -1,71 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Плавання, Спорт, Здоров'я">
+    <meta name="keywords" content="Плавання, Спорт, Басейн, Окуляри, Ласти">
     <meta name="author" content="Олег Шеремет">
-    <meta name="description" content="Онлайн магазин приладдя для плавання.">
-    <title>Aqua Pro</title>
+    <meta name="description" content="Aqua Pro - Онлайн магазин найкращого приладдя для плавання.">
+    <meta name="robots" content="index, follow">
+    <title>Aqua Pro - Головна</title>
+    <link rel="icon" type="image/x-icon" href="image/drop.ico">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Got from google fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp');
     </style>
-    <!-- --------------------- -->
+    <script src="script.js"></script>
 </head>
-<body>
-    <header>
-        <div class="header-logo">
-            <a href="index.html" id="logo-link">
-                <h1>Aqua Pro</h1>
+<body id="top">
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo-link">
+                <h1 class="header__logo-text" style="color:#59a3d4">Aqua Pro</h1>
             </a>
         </div>
-        <div class="catalog">
-            
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eeeeee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="catalog-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /></svg>
-                <p class="catalog-text">Каталог</p>
+        <nav class="header__catalog">
+            <div class="header__catalog-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eeeeee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__catalog-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /></svg>
+                <p class="header__catalog-text">Каталог</p>
             </div>
+            <ul class="header__catalog-dropdown">
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Окуляри</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Ласти</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Шапочки</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">М'ячі</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Круги</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Купальники та плавки</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Спорт і захоплення</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Інвентар для дітей з особливостями</li></button>
+            </ul>
+        </nav>
+        <div class="header__search">
+            <input type="text" class="header__search-input" maxlength="200" placeholder="Я шукаю...">
+            <button class="header__search-submit" type="button" onclick="location.href='searchResults.html';"></button>
         </div>
-        <div class="search">
-            <input type="text" id="search-input" maxlength="200" placeholder="Я шукаю..."><button id="submit" type="button"></button>
-        </div>
-        <div class="cart">
-            <button id="cart-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-button-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+        <div class="header__cart">
+            <button class="header__cart-button" onclick="location.href='cart.html';">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__cart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
             </button>
         </div>
-        <div class="profile-button">
-            <button id="profile-image"></button>
+        <div class="header__profile">
+            <button class="header__profile-button" onclick="location.href='profile.html';"></button>
         </div>
     </header>
-    <main>
-        <div class="banner">
-            <img src="image/portrait-athlete-competing-olympic-games-tournament.png" alt="Основний банер" width="100%" id="banner-image">
-        </div>
-        <div class="go-up">
-            <a href="#top-logo" id="go-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-4.98 3.66l-.163 .01l-.086 .016l-.142 .045l-.113 .054l-.07 .043l-.095 .071l-.058 .054l-4 4l-.083 .094a1 1 0 0 0 1.497 1.32l2.293 -2.293v5.586l.007 .117a1 1 0 0 0 1.993 -.117v-5.585l2.293 2.292l.094 .083a1 1 0 0 0 1.32 -1.497l-4 -4l-.082 -.073l-.089 -.064l-.113 -.062l-.081 -.034l-.113 -.034l-.112 -.02l-.098 -.006z" /></svg></a>
-        </div>
+    <main class="main-layout">
+        <aside class="sidebar">
+            <h3 class="sidebar__title">Категорії</h3>
+            <ul class="sidebar__list">
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_24" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_925_24)">
+                    <path d="M25.5836 13.3477H23.6178C23.0224 13.3432 22.4496 13.5684 22.025 13.9739C21.6004 14.3793 21.3588 14.9319 21.3533 15.5102V16.6202C21.3588 17.1989 21.6003 17.7518 22.0248 18.1578C22.4492 18.5638 23.0221 18.7898 23.6178 18.7862H24.8821C26.0352 18.7862 27.4661 18.5939 28.3552 17.079C28.4386 16.8024 28.8137 15.571 28.8936 15.2977C28.9226 15.1864 28.9219 15.0697 28.8915 14.9587C28.8611 14.8477 28.802 14.7461 28.7199 14.6634C28.1399 13.9178 26.5561 13.3477 25.5836 13.3477ZM8.24905 13.3477H6.2867C5.31422 13.3477 3.73045 13.9246 3.16085 14.6668C3.07873 14.7494 3.01967 14.851 2.98928 14.962C2.95889 15.073 2.95817 15.1897 2.98719 15.3011C3.06707 15.5777 3.44218 16.8091 3.52553 17.0858C4.41466 18.6006 5.84561 18.7929 6.9987 18.7929H8.25947C8.85517 18.7947 9.42731 18.567 9.85048 18.1598C10.2737 17.7525 10.5134 17.1989 10.517 16.6202V15.5035C10.5088 14.926 10.2657 14.3752 9.84072 13.9713C9.41578 13.5673 8.84357 13.3431 8.24905 13.3477ZM31.5367 13.4624C30.4704 12.0926 27.6814 11.0704 25.8962 11.0704H22.555C21.8411 11.0671 21.1379 11.2396 20.5111 11.5718C19.8843 11.9039 19.3544 12.3849 18.9707 12.9698C18.9222 13.0436 18.8555 13.1044 18.7767 13.1468C18.6978 13.1892 18.6093 13.2119 18.5192 13.2127H13.3511C13.261 13.2122 13.1723 13.1897 13.0935 13.1472C13.0146 13.1048 12.9479 13.0438 12.8996 12.9698C12.5159 12.3849 11.986 11.9039 11.3592 11.5718C10.7325 11.2396 10.0293 11.0671 9.31531 11.0704H5.97412C4.18891 11.0704 1.39995 12.0825 0.333688 13.4624C0.162359 13.6497 0.0410716 13.875 -0.019494 14.1186C-0.0800597 14.3622 -0.0780458 14.6165 -0.0136295 14.8591C0.125297 15.3449 0.809512 17.5581 0.920654 17.9461C2.54263 20.743 5.26559 21.0702 7.17236 21.0702H9.31878C10.4328 21.0774 11.5044 20.6553 12.2986 19.8965C13.0929 19.1376 13.545 18.1038 13.5561 17.0217V15.7565C13.5561 15.6193 13.6119 15.4877 13.7115 15.3903C13.811 15.293 13.9462 15.2379 14.0874 15.237H17.7864C17.9276 15.2379 18.0628 15.293 18.1623 15.3903C18.2619 15.4877 18.3178 15.6193 18.3178 15.7565V17.0149C18.3288 18.0971 18.7809 19.1308 19.5752 19.8897C20.3694 20.6486 21.441 21.0707 22.555 21.0635H24.7015C26.6187 21.0635 29.3416 20.7261 30.9532 17.9394C31.0713 17.5581 31.7485 15.3382 31.8875 14.8524C31.9514 14.6095 31.9529 14.355 31.8917 14.1114C31.8305 13.8678 31.7086 13.6426 31.5367 13.4556V13.4624ZM11.5868 16.6202C11.5813 17.475 11.2266 18.2928 10.6008 18.8938C9.97492 19.4947 9.12906 19.8298 8.24905 19.8253H6.98829C6.21377 19.8253 3.86243 19.8253 2.55304 17.5345C2.53302 17.5019 2.51782 17.4667 2.50789 17.4299C2.50789 17.4299 2.04249 15.8915 1.94524 15.5743C1.87258 15.3091 1.86619 15.0307 1.9266 14.7626C1.98701 14.4944 2.11247 14.2441 2.29256 14.0325C3.10528 13.0103 5.01205 12.3018 6.2867 12.3018H8.24905C9.12847 12.2973 9.9738 12.6319 10.5995 13.2321C11.2253 13.8324 11.5803 14.6493 11.5868 15.5035V16.6202ZM29.9251 15.5743C29.8348 15.8915 29.3625 17.4299 29.3625 17.4299C29.3525 17.4667 29.3373 17.5019 29.3173 17.5345C28.0149 19.8253 25.6601 19.8253 24.8821 19.8253H23.6178C22.7384 19.8289 21.8934 19.4934 21.2684 18.8926C20.6433 18.2917 20.2891 17.4745 20.2836 16.6202V15.5035C20.29 14.6498 20.6446 13.8335 21.2696 13.2333C21.8946 12.6332 22.739 12.2982 23.6178 12.3018H25.5836C26.8583 12.3018 28.7651 12.9968 29.5709 14.0325C29.7521 14.2435 29.8789 14.4935 29.9405 14.7617C30.0021 15.0299 29.9968 15.3085 29.9251 15.5743Z" fill="#636363"/>
+                    </g>
+                    </svg>
+
+                    <span>Окуляри</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="29" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5077 1.075C12.4077 2.175 10.3077 2.375 8.80766 0.375C8.40766 -0.125 7.60766 -0.125 7.20766 0.375C6.40766 1.375 3.30766 2.075 1.50766 1.075C0.807657 0.675 -0.0923428 1.275 0.00765719 2.075L3.30766 21.975C3.70766 24.275 5.70766 25.875 8.00766 25.875C10.3077 25.875 12.3077 24.175 12.7077 21.975L16.0077 2.075C16.1077 1.275 15.3077 0.675 14.5077 1.075ZM8.00766 23.975C6.30766 23.975 5.00766 22.175 5.00766 19.975C5.00766 17.775 6.30766 15.975 8.00766 15.975C9.70766 15.975 11.0077 17.775 11.0077 19.975C11.0077 22.175 9.70766 23.975 8.00766 23.975Z" fill="#636363"/>
+                    <path d="M28.7077 28.0746L32.0077 8.17461C32.1077 7.37461 31.3077 6.77461 30.5077 7.17461C28.4077 8.27461 26.3077 8.47461 24.8077 6.47461C24.4077 5.97461 23.6077 5.97461 23.2077 6.47461C22.4077 7.47461 19.3077 8.17461 17.5077 7.17461C16.8077 6.77461 15.9077 7.37461 16.0077 8.17461L19.3077 28.0746C19.7077 30.3746 21.7077 31.9746 24.0077 31.9746C26.3077 31.9746 28.3077 30.2746 28.7077 28.0746ZM24.0077 29.9746C22.3077 29.9746 21.0077 28.1746 21.0077 25.9746C21.0077 23.7746 22.3077 21.9746 24.0077 21.9746C25.7077 21.9746 27.0077 23.7746 27.0077 25.9746C27.0077 28.1746 25.7077 29.9746 24.0077 29.9746Z" fill="#636363"/>
+                    </svg>
+                    <span>Ласти</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_36" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_925_36)">
+                    <path d="M0.693087 24.4328H10.4809C7.85667 20.3 6.70189 15.4951 7.18938 10.6758C2.94562 13.5031 0.0954348 18.2978 0 23.7258C0 23.913 0.0692918 24.0932 0.20098 24.2249C0.332668 24.3565 0.50594 24.4328 0.693087 24.4328Z" fill="#636363"/>
+                    <path d="M19.7719 24.4331C22.5343 20.3048 23.7091 15.341 23.0741 10.4002L23.0063 9.87354C22.9962 9.79562 23.0116 9.72227 23.0223 9.64815C20.8947 8.59562 18.5092 8 15.9966 8C13.5466 8 11.2156 8.56499 9.12824 9.57044C9.12702 9.59016 9.13527 9.60809 9.13256 9.62798L9.05988 10.1626C8.37763 15.1882 9.6437 20.2373 12.6186 24.4331H19.7719Z" fill="#636363"/>
+                    <path d="M21.7637 24.433H31.3069C31.494 24.433 31.6673 24.3567 31.799 24.2251C31.9307 24.0934 32 23.9132 32 23.726C31.9044 18.2914 29.0471 13.492 24.7931 10.666C25.3068 15.484 24.2415 20.2988 21.7637 24.433Z" fill="#636363"/>
+                    </g>
+                    </svg>
+                    <span>Шапочки</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_49" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_925_49)">
+                    <path d="M30.4113 8.6702C30.4113 8.66536 30.4065 8.66051 30.4065 8.65567C30.3871 8.62176 30.3726 8.58786 30.3532 8.5588C29.4135 6.68426 28.1009 5.02759 26.517 3.68126C26.4976 3.65704 26.4734 3.64251 26.4492 3.62313C24.9427 2.35892 23.1991 1.38047 21.2905 0.760469C21.2614 0.745937 21.2323 0.741094 21.2033 0.73625C19.7211 0.256711 18.1372 0 16.5 0C12.8138 0 9.42828 1.29329 6.76415 3.44379C6.73509 3.46316 6.70602 3.48254 6.68181 3.5116C4.72494 5.12456 3.16518 7.19285 2.18186 9.57117C2.16733 9.60023 2.1528 9.6293 2.14311 9.6632C2.13343 9.67289 2.12858 9.68742 2.12858 9.69711C1.40201 11.4893 1 13.4509 1 15.5C1 23.2308 6.68662 29.6534 14.0925 30.8062C14.107 30.8159 14.1216 30.8208 14.1409 30.8208C14.1555 30.8256 14.1651 30.8256 14.1797 30.8256C14.1942 30.8305 14.2136 30.8305 14.2281 30.8305C14.9692 30.9419 15.7297 31 16.4998 31C17.8222 31 19.1106 30.8305 20.341 30.5205C20.3895 30.5108 20.4282 30.4962 20.467 30.4769C22.3318 29.9877 24.0611 29.1594 25.5819 28.055C25.5868 28.055 25.5868 28.0501 25.5868 28.0501C25.6304 28.0211 25.6691 27.992 25.7079 27.963C25.7127 27.963 25.7176 27.9581 25.7176 27.9533C29.5247 25.1245 32 20.5957 32 15.5C32 13.049 31.4285 10.7336 30.4113 8.6702ZM16.6018 16.5994C16.3451 15.9213 16.1174 15.2238 15.914 14.4972C16.5049 14.6522 17.0959 14.8266 17.6868 15.0349C17.3526 15.5725 16.9941 16.0956 16.6018 16.5994ZM29.4909 8.93649C29.0647 15.5336 26.6331 20.9053 22.2643 24.9064C21.2955 24.0733 20.4236 23.1482 19.6389 22.1261C24.4148 18.0282 26.7835 12.3128 26.6964 5.11487C27.8249 6.22409 28.7741 7.51248 29.4909 8.93649ZM16.5001 0.939424C17.9484 0.939424 19.3482 1.15255 20.6705 1.54975C20.7432 2.47492 20.7674 3.38067 20.7432 4.26709C17.0524 2.91567 13.1045 2.5088 8.96821 3.04163C11.1673 1.70959 13.7439 0.939424 16.5001 0.939424ZM2.95225 10.1715C8.69219 7.56074 14.3884 7.5317 19.8859 10.0747C19.4694 11.5326 18.8978 12.9131 18.1713 14.2113C17.2558 13.8819 16.3307 13.6204 15.4104 13.4169C15.3813 13.4072 15.3571 13.4024 15.328 13.3975H15.3232H15.3183C12.1021 12.6952 8.87624 12.734 5.65505 13.5283C5.63567 13.5332 5.6163 13.538 5.59208 13.5477C4.38116 13.848 3.17021 14.2549 1.9592 14.7732C2.0367 13.1553 2.3807 11.6102 2.95225 10.1715ZM16.5001 30.0599C15.793 30.0599 15.1051 30.0115 14.427 29.9097H14.4222C8.95844 25.2693 6.26548 20.1785 6.19759 14.366C7.43758 14.0802 8.68725 13.9107 9.93215 13.8623C10.3003 20.3239 13.3809 25.6906 19.0917 29.8223C18.2537 29.9822 17.3865 30.0599 16.5001 30.0599Z" fill="#636363"/>
+                    </g>
+                    </svg>
+                    <span>М'ячі</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_63" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#333333"/>
+                    </mask>
+                    <g mask="url(#mask0_925_63)">
+                    <path d="M31.1724 10.8966C29.8207 6.89103 26.869 3.51997 23.0676 1.64413C22.6152 1.42342 22.1572 1.21929 21.7159 1.05378C19.8952 0.353078 17.9752 0 16 0C14.3393 -5.51724e-08 12.7062 0.253772 11.1503 0.750337C10.6758 0.899279 10.1959 1.08136 9.67171 1.30206C3.79586 3.82893 0 9.59998 0 16C0 22.4165 3.8124 28.1931 9.71033 30.7145C10.251 30.9407 10.7365 31.1227 11.2 31.2607C12.7448 31.7517 14.3559 32 16 32C17.9476 32 19.851 31.6524 21.6662 30.9682C22.1959 30.7641 22.6317 30.571 23.0345 30.3724C26.7807 28.5352 29.7214 25.2248 31.1007 21.2855C31.6966 19.5972 32 17.8207 32 16C32 14.2565 31.7186 12.5407 31.1724 10.8966ZM21.9089 2.32274C22.1296 2.42204 22.3559 2.52687 22.5821 2.63722C25.9366 4.28687 28.5793 7.19999 29.9145 10.6758L22.6262 12.3807C22.5876 12.3862 22.56 12.4083 22.5269 12.4248C22.0414 11.5365 21.3793 10.7421 20.5462 10.1021C20.4138 9.99724 20.2814 9.90342 20.1545 9.81516L21.9089 2.32274ZM19.1945 21.4786C17.5062 22.4717 15.371 22.6207 13.5338 21.8427C13.269 21.7379 13.0152 21.611 12.7779 21.4676C11.7683 20.8717 10.9462 20.0165 10.4055 18.9848C9.91447 18.0855 9.65517 17.0483 9.65517 16C9.65517 15.0013 9.88136 14.0469 10.3172 13.1641C10.8634 12.0827 11.702 11.1779 12.7448 10.5545C13.0097 10.4 13.2524 10.2731 13.4952 10.1683C14.2841 9.82621 15.1283 9.65517 16 9.65517C17.1476 9.65517 18.2676 9.96414 19.2497 10.549C19.4483 10.6703 19.6579 10.8083 19.8731 10.9738C21.4455 12.1876 22.3448 14.0193 22.3448 16C22.3448 17.9972 21.4345 19.8345 19.851 21.0427C19.6083 21.2248 19.4041 21.3627 19.1945 21.4786ZM10.1076 2.31721C10.389 2.19585 10.6593 2.09102 10.9186 1.99724L12.6345 9.3517C12.4855 9.42895 12.3365 9.51172 12.1821 9.6055C11.0841 10.2621 10.1793 11.1834 9.54482 12.2814L2.13517 10.549C3.56412 6.91861 6.38897 3.91723 10.1076 2.31721ZM10.9683 30.0193C10.7034 29.9255 10.4331 29.8207 10.1407 29.6993C6.46067 28.1269 3.65793 25.1862 2.2069 21.622L9.6607 19.8786C10.2896 20.9158 11.1558 21.7931 12.2097 22.4165C12.3641 22.5048 12.5241 22.5931 12.6897 22.6703L10.9683 30.0193ZM22.5434 29.3848C22.3283 29.4896 22.1021 29.5945 21.8593 29.6993L20.1048 22.2179C20.2372 22.1296 20.3696 22.0358 20.5131 21.9255H20.5186C21.3076 21.3241 21.9421 20.5848 22.4221 19.7572L29.8427 21.4952C28.4855 24.9103 25.8538 27.7627 22.5434 29.3848Z" fill="#636363"/>
+                    </g>
+                    </svg>
+                    <span>Круги</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_75" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#333333"/>
+                    </mask>
+                    <g mask="url(#mask0_925_75)">
+                    <path d="M28.1996 0H3.8004C3.5963 0 3.42481 0.153906 3.40274 0.356641L0.00235385 31.5566C-0.00995083 31.6695 0.0263773 31.7824 0.102158 31.8672C0.178135 31.9516 0.286338 32 0.40001 32H14.4C14.6018 32 14.7719 31.8496 14.7969 31.6496L16 22.0012L17.2031 31.6496C17.2281 31.8496 17.3982 32 17.6 32H31.6C31.7137 32 31.8219 31.9516 31.8978 31.8672C31.9736 31.7824 32.01 31.6695 31.9976 31.5566L28.5973 0.356641C28.5752 0.153906 28.4037 0 28.1996 0ZM26.5444 31.2C27.1254 30.5256 27.4588 29.6633 27.4588 28.7469C27.4588 26.6695 25.7687 24.9793 23.6916 24.9793C21.6145 24.9793 19.9244 26.6695 19.9244 28.7469C19.9244 29.6632 20.2578 30.5256 20.8388 31.2H17.9531L16.3969 18.7188C16.3719 18.5187 16.2018 18.3684 16 18.3684C15.7982 18.3684 15.6281 18.5187 15.6031 18.7188L14.0469 31.2H9.45369C9.03934 29.5329 7.54395 28.3469 5.80079 28.3469C4.05618 28.3469 2.56165 29.5323 2.14764 31.2H0.845908L2.26607 18.1697C2.7035 18.3417 3.17132 18.4344 3.64571 18.4344C5.72305 18.4344 7.41309 16.7445 7.41309 14.6672C7.41309 12.5898 5.72305 10.9 3.64571 10.9C3.4462 10.9 3.24845 10.9174 3.05313 10.9483L3.57555 6.15508H15.0662C14.3268 6.94626 13.2699 8.51421 13.1818 11.0918C13.0939 13.6641 11.2865 14.8121 11.2107 14.859C11.0221 14.9738 10.9625 15.2199 11.0773 15.4086C11.1527 15.532 11.2844 15.6004 11.4193 15.6004C11.4902 15.6004 11.5621 15.5816 11.6272 15.5418C11.7189 15.4859 13.8783 14.1355 13.9814 11.1191C14.0783 8.28171 15.4521 6.82891 16 6.35955C16.5479 6.82891 17.9217 8.28171 18.0186 11.1191C18.1217 14.1355 20.2811 15.4859 20.3729 15.5418C20.4377 15.5816 20.5094 15.6004 20.5803 15.6004C20.7146 15.6004 20.8457 15.5324 20.9213 15.4094C21.0367 15.2215 20.9777 14.9754 20.7904 14.8594C20.7135 14.8121 18.9061 13.6641 18.8182 11.0918C18.7302 8.51421 17.6732 6.94626 16.9338 6.15508H23.8971C23.5043 6.75913 23.2916 7.46304 23.2916 8.20117C23.2916 10.2785 24.9816 11.9684 27.0588 11.9684C27.7473 11.9684 28.4172 11.78 28.9994 11.43L29.5543 16.5219C28.9702 16.1636 28.2993 15.9684 27.5934 15.9684C25.5162 15.9684 23.8262 17.6582 23.8262 19.7355C23.8262 21.8129 25.5162 23.5027 27.5934 23.5027C28.5848 23.5027 29.5092 23.1228 30.2011 22.4565L31.1541 31.2H26.5444Z" fill="#636363"/>
+                    <path d="M9.16796 19.1516C7.09082 19.1516 5.40078 20.8414 5.40078 22.9188C5.40078 24.9961 7.09082 26.6859 9.16796 26.6859C11.2453 26.6859 12.9353 24.9961 12.9353 22.9188C12.9353 20.8414 11.2453 19.1516 9.16796 19.1516Z" fill="#636363"/>
+                    </g>
+                    </svg>
+                    <span>Купальники та плавки</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_66" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#333333"/>
+                    </mask>
+                    <g mask="url(#mask0_925_66)">
+                    <path d="M24.8855 15.8166C27.3162 15.8166 29.294 13.839 29.294 11.4083C29.294 8.97757 27.3165 7 24.8855 7C22.4546 7 20.4771 8.97757 20.4771 11.4083C20.4771 13.839 22.4546 15.8166 24.8855 15.8166ZM24.8855 8.49832C26.4902 8.49832 27.7957 9.80379 27.7957 11.4083C27.7957 13.0128 26.4902 14.3182 24.8855 14.3182C23.2808 14.3182 21.9754 13.0128 21.9754 11.4083C21.9754 9.80357 23.2808 8.49832 24.8855 8.49832Z" fill="#636363"/>
+                    <path d="M4.80693 17.8135C5.43258 17.8849 6.04775 17.7066 6.53941 17.313L10.2426 14.3489L12.0806 15.2214L5.26456 20.3533C5.66932 20.5355 6.04133 20.7919 6.36069 21.1209L6.51908 21.2842L13.9704 15.6736C14.1798 15.5161 14.2915 15.2603 14.265 14.9996C14.2384 14.7389 14.0777 14.5109 13.841 14.3986L10.7033 12.9092C10.2993 12.7174 9.81218 12.7742 9.46285 13.0537L5.60318 16.1433C5.42509 16.2858 5.20184 16.3504 4.97538 16.3245C4.74871 16.2991 4.546 16.1863 4.40431 16.0078C4.12005 15.6492 4.16843 15.1342 4.51454 14.835L8.80959 11.1217C9.71179 10.3415 10.959 10.1346 12.0652 10.5813L17.0758 12.6049C17.1315 12.6273 17.1799 12.665 17.2152 12.7138L21.3602 18.4222C21.4126 18.4943 21.4327 18.5862 21.4154 18.6735L21.1121 20.1999C21.6192 20.3574 22.0834 20.6316 22.4801 21.0032L22.885 18.9654C22.9835 18.4697 22.8698 17.9507 22.5727 17.5418L18.4277 11.8332C18.227 11.5567 17.9534 11.3431 17.6371 11.2153L12.6265 9.19168C10.9973 8.5337 9.15912 8.83872 7.82968 9.98793L3.53464 13.7014C2.57935 14.5272 2.44578 15.9493 3.23026 16.9386C3.62132 17.4318 4.18127 17.7426 4.80693 17.8135Z" fill="#636363"/>
+                    <path d="M31.7883 22.9799L30.3454 21.494C29.7694 20.9009 28.9965 20.5742 28.1696 20.5742C27.343 20.5742 26.5701 20.9006 25.9941 21.494L25.2092 22.3022C24.9178 22.6023 24.5268 22.7675 24.1081 22.7675C23.6899 22.7675 23.2988 22.6025 23.0075 22.3024L22.2226 21.494C21.6466 20.9009 20.8737 20.5742 20.0468 20.5742C19.2199 20.5742 18.447 20.9006 17.8708 21.4942L17.0863 22.3022C16.7948 22.6023 16.4039 22.7675 15.9855 22.7675C15.567 22.7675 15.176 22.6025 14.8846 22.3022L14.0997 21.494C13.5237 20.9009 12.7508 20.574 11.924 20.5742C11.0971 20.5742 10.3244 20.9006 9.7484 21.494L8.96349 22.3022C8.67196 22.6023 8.28111 22.7675 7.86265 22.7675C7.44419 22.7678 7.05313 22.6025 6.76181 22.3022L5.97691 21.494C5.40091 20.9009 4.6282 20.5742 3.80113 20.5742C2.97406 20.5742 2.20135 20.9006 1.62 21.4995L0.206442 22.9854C-0.0788815 23.2851 -0.066895 23.7592 0.232769 24.0445C0.532648 24.3299 1.00719 24.3179 1.29187 24.018L2.70029 22.5377C2.99182 22.2376 3.38267 22.0723 3.80134 22.0723C4.2198 22.0723 4.61065 22.2374 4.90218 22.5377L5.68709 23.3459C6.2633 23.939 7.03601 24.2659 7.86287 24.2657C8.68973 24.2657 9.46243 23.9392 10.0384 23.3459L10.8233 22.5377C11.1149 22.2376 11.5057 22.0723 11.9242 22.0723C12.3426 22.0721 12.7337 22.2374 13.025 22.5377L13.8099 23.3459C14.3859 23.939 15.1586 24.2657 15.9857 24.2657C16.8126 24.2657 17.5853 23.9392 18.1617 23.3457L18.9462 22.5377C19.2375 22.2376 19.6285 22.0723 20.0472 22.0723C20.4659 22.0723 20.8567 22.2374 21.1481 22.5374L21.933 23.3459C22.509 23.939 23.2819 24.2657 24.1085 24.2657C24.9354 24.2657 25.7083 23.9392 26.2843 23.3459L27.0692 22.5377C27.3605 22.2376 27.7516 22.0723 28.1701 22.0723C28.5885 22.0723 28.9796 22.2374 29.2711 22.5377L30.714 24.0236C31.0021 24.3202 31.4762 24.3271 31.7733 24.039C32.0695 23.7511 32.0764 23.2768 31.7883 22.9799Z" fill="#636363"/>
+                    </g>
+                    </svg>
+                    <span>Спорт і захоплення</span>
+                </li></button>
+                <button class="sidebar__list-button" onclick="location.href='searchResults.html';"><li class="sidebar__list-item">
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_925_108" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#333333"/>
+                    </mask>
+                    <g mask="url(#mask0_925_108)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7406 31H10.708C10.4795 31 10.2185 30.9023 10.0553 30.707C10.0227 30.6744 9.9574 30.6093 9.92477 30.5442L0.495994 15.1791C-0.482972 13.5838 0.0391415 11.5326 1.6055 10.5559L17.0385 1.14855C17.4627 0.855524 18.0501 1.01832 18.3438 1.44157L18.5396 1.76715L22.4229 8.14612C22.8145 7.6903 23.1408 7.29962 23.4345 6.90889C23.9566 6.22515 24.4135 5.63909 25.0661 5.24841C27.2199 3.94606 30.0262 4.59723 31.3293 6.74608C32.6347 8.89492 31.982 11.6949 29.8283 12.995C29.1756 13.3857 28.4251 13.5159 27.5766 13.6788C27.1198 13.7764 26.5976 13.8741 26.0429 14.0043L29.0451 18.8881C29.3061 19.3439 29.1756 19.9299 28.7187 20.1904L23.0754 23.6416C22.847 23.7718 22.5533 23.8044 22.2596 23.7067C21.9985 23.6416 21.8028 23.4137 21.7049 23.1532C21.248 21.9485 21.0848 20.9718 20.9217 20.1904C20.7912 19.4741 20.6933 18.9532 20.4648 18.5951C19.7143 17.3579 18.0827 16.9672 16.8427 17.716C15.57 18.4649 15.1784 20.0928 15.9616 21.3625C16.19 21.7207 16.6143 22.0463 17.169 22.5021C17.8217 22.9905 18.6048 23.5765 19.4533 24.5207C19.6491 24.716 19.747 25.0091 19.7144 25.2695C19.6817 25.5626 19.5186 25.823 19.2575 25.9533L11.2322 30.8696C11.1996 30.9022 11.1343 30.9347 11.1017 30.9347C10.9711 30.9998 10.8732 30.9998 10.7427 30.9998L10.7406 31ZM2.12554 14.1698C1.70134 13.4861 1.92973 12.607 2.61503 12.1837L17.1951 3.26274L21.4373 10.1629C21.6005 10.4234 21.8289 10.5862 22.1226 10.6187C22.4163 10.6513 22.6773 10.5536 22.9058 10.3583C23.8194 9.51171 24.4395 8.69778 24.929 8.07917L24.9521 8.04954C25.3969 7.47885 25.7182 7.06654 26.0711 6.8745C27.3112 6.09308 28.9427 6.48376 29.6933 7.72099C30.4765 8.99078 30.0849 10.6186 28.8449 11.3675C28.4533 11.5954 27.9312 11.6931 27.2132 11.8233C26.4301 11.9536 25.4511 12.1489 24.2763 12.5722C23.9826 12.6699 23.7869 12.8978 23.689 13.1582C23.5911 13.4187 23.6237 13.7443 23.7869 13.9722L26.8869 19.0838L23.1342 21.3629C22.971 20.8094 22.8731 20.321 22.8079 19.8652C22.6447 18.9861 22.4815 18.2699 22.0899 17.5861C20.7868 15.4698 17.9805 14.7861 15.8267 16.0884C14.7825 16.7396 14.0646 17.7164 13.7709 18.921C13.5099 20.0931 13.673 21.2977 14.3256 22.3396C14.7172 22.9908 15.3372 23.4792 16.0225 24.0001C16.3815 24.2931 16.8057 24.5861 17.23 24.9768L11.0648 28.7536L2.12554 14.1698Z" fill="#636363"/>
+                    </g>
+                    </svg>
+                    <span>Інвентар для дітей з особливими потребами</span>
+                </li></button>
+            </ul>
+        </aside>
+        <section class="products">
+            <div class="promo-banner">
+                <h1 style="color: white; text-shadow: 2px 2px 4px #00000079;">ТОП ПРОДАЖІВ</h1>
+                <p>Улюблені товари плавців зі знижкою до -50%</p>
+            </div>
+            <h2 class="products__title">Найкращі пропозиції для вас</h2>
+            <div class="products__grid">
+                <article class="product-card">
+                    <img src="https://arenastore.com.ua/image/cache/catalog/pim/product/002507-530/002507-530-arena_002507-530-arena_002507-530(16)-1600x1600.webp" alt="Окуляри Arena" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Окуляри для плавання Arena COBRA ULTRA SWIPE MR</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">3 450 грн</span>
+                        <span class="product-card__price-new">1 725 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card" >
+                    <img src="https://content.rozetka.com.ua/goods/images/big/620622978.webp" alt="Шапочка Speedo" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Шапочка для плавання Speedo Pace Cap AU - Black</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">1 480 грн</span>
+                        <span class="product-card__price-new">1 090 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/600475603.jpg" alt="Ласти Mares" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Ласти для плавання тренувальні Mares Hermes...</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">2 142 грн</span>
+                        <span class="product-card__price-new">1 587 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/620623253.jpg" alt="Рюкзак TYR" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Рюкзак TYR Alliance 45 л/ - Black</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">5 600 грн</span>
+                        <span class="product-card__price-new">4 200 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content2.rozetka.com.ua/goods/images/big/367373600.jpg" alt="Окуляри Speedo" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Окуляри для плавання Speedo Biofuse 2.0...</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">1 719 грн</span>
+                        <span class="product-card__price-new">1 040 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content2.rozetka.com.ua/goods/images/big/398273232.jpg" alt="Рюкзак Zoggs" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Рюкзак Zoggs Cordura Back Pack Чорний</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">2 354 грн</span>
+                        <span class="product-card__price-new">1 571 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer>
-        <div class="footer-top">
-            <div class="footer-logo">
-                <a href="index.html" id="about-foot-logo">Aqua Pro</a>
+    <button class="go-up-btn" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" /></svg></button>
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4 class="footer__title">Інформація</h4>
+                <a href="about.html" class="footer__link">Про нас</a>
+                <a href="delivery.html" class="footer__link">Умови доставки</a>
             </div>
-            <div class="links">
-                <nav id="about-foot-nav">
-                    <a href="about.html" id="about-text">Про нас</a>
-                    <a href="contacts.html" id="contacts-text">Контакти</a>
-                    <a href="social.html" id="contacts-text">Соціальні мережі</a>
-                    <a href="delivery.html" id="contacts-text">Доставка</a>
-                </nav>
+            <div class="footer__col">
+                <h4 class="footer__title">Допомога</h4>
+                <a href="contacts.html" class="footer__link">Контакти</a>
+                <a href="questions.html" class="footer__link">Питання та відповіді</a>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Ми в соцмережах</h4>
+                <a href="https://www.instagram.com/" class="footer__link" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/" class="footer__link" target="_blank">Facebook</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="copyright">
-                <p id="copyright-text">Олег Шеремет &copy; 2026</p>
-            </div>
+        <div class="footer__copy">
+            <p>Олег Шеремет &copy; 2026. Всі права захищені.</p>
         </div>
     </footer>
 </body>

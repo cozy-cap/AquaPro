@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Плавання, Спорт, Басейн, Окуляри, Ласти">
+    <meta name="author" content="Олег Шеремет">
+    <meta name="description" content="Aqua Pro - Онлайн магазин найкращого приладдя для плавання.">
+    <meta name="robots" content="index, follow">
+    <title>Aqua Pro - Головна</title>
+    <link rel="icon" type="image/x-icon" href="image/drop.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp');
+    </style>
+    <script src="script.js"></script>
+</head>
+<body id="top">
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo-link">
+                <h1 class="header__logo-text" style="color:#59a3d4">Aqua Pro</h1>
+            </a>
+        </div>
+        <nav class="header__catalog">
+            <div class="header__catalog-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eeeeee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__catalog-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /></svg>
+                <p class="header__catalog-text">Каталог</p>
+            </div>
+            <ul class="header__catalog-dropdown">
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Окуляри</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Ласти</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Шапочки</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">М'ячі</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Круги</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Купальники та плавки</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Спорт і захоплення</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Інвентар для дітей з особливостями</li></button>
+            </ul>
+        </nav>
+        <div class="header__search">
+            <input type="text" class="header__search-input" maxlength="200" placeholder="Я шукаю...">
+            <button class="header__search-submit" type="button" onclick="location.href='searchResults.html';"></button>
+        </div>
+        <div class="header__cart">
+            <button class="header__cart-button" onclick="location.href='cart.html';">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__cart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+        </div>
+        <div class="header__profile">
+            <button class="header__profile-button" onclick="location.href='profile.html';"></button>
+        </div>
+    </header>
+    <main class="main-layout">
+        <aside class="sidebar">
+            <h3 class="sidebar__title">Фільтри</h3>
+            <div class="sidebar__filters">
+                <h4 class="sidebar__filters__price-title">Ціна</h4>
+                <div class="sidebar__filters__price">
+                    <input class="sidebar__filters__price-min" type="number" max="20" placeholder="від">
+                    <input class="sidebar__filters__price-max" type="number" max="20" placeholder="до">
+                </div>
+                <h4 class="sidebar__filters__brand-title">Бреенд</h4>
+                <div class="sidebar__filters__brand">
+                    <input class="sidebar__filters__brand-search" type="text" placeholder="Пошук">
+                    <ul class="sidebar__filters__brand-checklist">
+                        <li class="sidebar__filters__brand-checklist-item">
+                            <input type="checkbox" class="sidebar__filters__brand-checklist-item-check">
+                            <label class="sidebar__filters__brand-checklist-item-label">Arena</label>
+                        </li>
+                        <li class="sidebar__filters__brand-checklist-item">
+                            <input type="checkbox" class="sidebar__filters__brand-checklist-item-check">
+                            <label class="sidebar__filters__brand-checklist-item-label">Speedo</label>
+                        </li>
+                        <li class="sidebar__filters__brand-checklist-item">
+                            <input type="checkbox" class="sidebar__filters__brand-checklist-item-check">
+                            <label class="sidebar__filters__brand-checklist-item-label">Zoggs</label>
+                        </li>
+                        <li class="sidebar__filters__brand-checklist-item">
+                            <input type="checkbox" class="sidebar__filters__brand-checklist-item-check">
+                            <label class="sidebar__filters__brand-checklist-item-label">TYR</label>
+                        </li>
+                        <li class="sidebar__filters__brand-checklist-item">
+                            <input type="checkbox" class="sidebar__filters__brand-checklist-item-check">
+                            <label class="sidebar__filters__brand-checklist-item-label">Mares</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <section class="products">
+            <h2 class="products__title">Товари які ви шукаєте</h2>
+            <div class="products__grid">
+                <article class="product-card">
+                    <img src="https://arenastore.com.ua/image/cache/catalog/pim/product/002507-530/002507-530-arena_002507-530-arena_002507-530(16)-1600x1600.webp" alt="Окуляри Arena" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Окуляри для плавання Arena COBRA ULTRA SWIPE MR</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">3 450 грн</span>
+                        <span class="product-card__price-new">1 725 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/600476113.jpg" alt="Плавки-сліпи" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Плавки-сліпи для плавання з поліестеру, чорні...</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-only">250 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card" >
+                    <img src="https://content.rozetka.com.ua/goods/images/big/620622978.webp" alt="Шапочка Speedo" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Шапочка для плавання Speedo Pace Cap AU - Black</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">1 480 грн</span>
+                        <span class="product-card__price-new">1 090 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/600475603.jpg" alt="Ласти Mares" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Ласти для плавання тренувальні Mares Hermes...</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">2 142 грн</span>
+                        <span class="product-card__price-new">1 587 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content.rozetka.com.ua/goods/images/big/620623253.jpg" alt="Рюкзак TYR" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Рюкзак TYR Alliance 45 л/ - Black</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">5 600 грн</span>
+                        <span class="product-card__price-new">4 200 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content2.rozetka.com.ua/goods/images/big/367373600.jpg" alt="Окуляри Speedo" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Окуляри для плавання Speedo Biofuse 2.0...</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">1 719 грн</span>
+                        <span class="product-card__price-new">1 040 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://content2.rozetka.com.ua/goods/images/big/398273232.jpg" alt="Рюкзак Zoggs" class="product-card__img">
+                    <a href="productPage.html" class="product-card__name">Рюкзак Zoggs Cordura Back Pack Чорний</a>
+                    <div class="product-card__price">
+                        <span class="product-card__price-old">2 354 грн</span>
+                        <span class="product-card__price-new">1 571 грн</span>
+                    </div>
+                    <div class="product-card__btns">
+                        <button class="product-card__btn-buy" onclick="location.href='productPage.html';">Купити</button>
+                        <button class="product-card__btn-addToCart"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="product-card__btn-addToCart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <button class="go-up-btn" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" /></svg></button>
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4 class="footer__title">Інформація</h4>
+                <a href="about.html" class="footer__link">Про нас</a>
+                <a href="delivery.html" class="footer__link">Умови доставки</a>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Допомога</h4>
+                <a href="contacts.html" class="footer__link">Контакти</a>
+                <a href="questions.html" class="footer__link">Питання та відповіді</a>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Ми в соцмережах</h4>
+                <a href="https://www.instagram.com/" class="footer__link" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/" class="footer__link" target="_blank">Facebook</a>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>Олег Шеремет &copy; 2026. Всі права захищені.</p>
+        </div>
+    </footer>
+</body>
+</html>

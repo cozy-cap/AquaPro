@@ -1,84 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Плавання, Спорт, Здоров'я">
+    <meta name="keywords" content="Плавання, Спорт, Басейн, Окуляри, Ласти">
     <meta name="author" content="Олег Шеремет">
-    <meta name="description" content="Онлайн магазин приладдя для плавання.">
-    <title>Aqua Pro</title>
+    <meta name="description" content="Aqua Pro - Онлайн магазин найкращого приладдя для плавання.">
+    <meta name="robots" content="index, follow">
+    <title>Aqua Pro - Головна</title>
+    <link rel="icon" type="image/x-icon" href="image/drop.ico">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Got from google fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp');
     </style>
-    <!-- --------------------- -->
+    <script src="script.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html" id="logo-link">
-                <h1>Aqua Pro</h1>
+<body id="top">
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html" class="header__logo-link">
+                <h1 class="header__logo-text" style="color:#59a3d4">Aqua Pro</h1>
             </a>
         </div>
-        <div class="catalog">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#59a3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="catalog-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /></svg>
-                <p class="catalog-text">Каталог</p>
+        <nav class="header__catalog">
+            <div class="header__catalog-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eeeeee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__catalog-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /><path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4" /></svg>
+                <p class="header__catalog-text">Каталог</p>
             </div>
+            <ul class="header__catalog-dropdown">
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Окуляри</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Ласти</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Шапочки</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">М'ячі</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Круги</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Купальники та плавки</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Спорт і захоплення</li></button>
+                <button class="header__catalog-button" onclick="location.href='searchResults.html';"><li class="header__catalog-dropdown-item">Інвентар для дітей з особливостями</li></button>
+            </ul>
+        </nav>
+        <div class="header__search">
+            <input type="text" class="header__search-input" maxlength="200" placeholder="Я шукаю...">
+            <button class="header__search-submit" type="button" onclick="location.href='searchResults.html';"></button>
         </div>
-        <div class="search">
-            <input type="text" id="search-input" maxlength="200"><button id="submit" type="button"></button>
-        </div>
-        <div class="cart">
-            <button id="cart-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-button-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+        <div class="header__cart">
+            <button class="header__cart-button" onclick="location.href='cart.html';">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__cart-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
             </button>
         </div>
+        <div class="header__profile">
+            <button class="header__profile-button" onclick="location.href='profile.html';"></button>
+        </div>
     </header>
-    <main>
-        <div class="title">
-            <h2>Про нас</h2>
-        </div>
-        <div>
-            <p>
-                Команда Aqua Pro є спільнотою професіоналів та ентузіастів, які об'єдналися, щоб зробити кожне ваше занурення у воду комфортним, безпечним та результативним. Ми не просто продаємо спорядження - ми допомагаємо вам підкорювати власні рекорди.
-            </p>
-        </div>
-        <article>
-            <h3>Наша філософія</h3>
-            <p>
-                Ми віримо, що плавання - це більше, ніж спорт. Це стиль життя. Саме тому ми ретельно відбираємо продукцію від провідних світових брендів, тестуючи кожну модель окулярів, ласт чи гідрокостюмів. Наша мета - надати екіпірування, яке стане вашою "другою шкірою".
-            </p>
+    <main class="main-layout" style="grid-template-columns: 1fr;">
+        <article class="content-box">
+            <h1 class="content-box__title">Про нас</h1>
+            <p class="content-box__about">Команда <b>Aqua Pro</b> є спільнотою професіоналів та ентузіастів, які об'єдналися, щоб зробити кожне ваше занурення у воду комфортним.</p>
+            <div class="content-box__block">
+                <div class="content-box__block-history">
+                    <h3 class="content-box__block-history-title">Наша історія</h3>
+                    <p class="content-box__block-history-title-content">Ми почали свій шлях у 2020 році...</p>
+                </div>
+                <div class="content-box__block-pricips">
+                    <h3 class="content-box__block-pricips-title">Наші принципи:</h3>
+                    <ol class="content-box__block-pricips-list">
+                        <li class="content-box__block-pricips-list-item"><b>Якість</b> понад усе</li>
+                        <li class="content-box__block-pricips-list-item">Клієнтоорієнтованість
+                            <ul class="content-box__block-pricips-nested-list">
+                                <li class="content-box__block-pricips-nested-list-item"><b>Цілодобова</b> підтримка</li>
+                                <li class="content-box__block-pricips-nested-list-item"><b>Швидке</b> повернення</li>
+                            </ul>
+                        </li>
+                        <li>Екологічність</li>
+                    </ol>
+                </div>
+            </div>
         </article>
-        <aside>
-            <h4>Швидкі факти</h4>
-            <ul>
-                <li>Понад 5000 задоволених плавців</li>
-                <li>Тільки сертифіковані бренди</li>
-                <li>Консультації від діючих тренерів</li>
-            </ul>
-        </aside>
-        <section>
-            <h3>Чому обирають нас?</h3>
-            <p>Ми пропонуємо індивідуальний підхід до кожного клієнта: від малюків, що вперше йдуть у басейн, до професійних атлетів.</p>
-        </section>
-        <div class="go-up">
-            <a href="#top-logo" id="go-up"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-4.98 3.66l-.163 .01l-.086 .016l-.142 .045l-.113 .054l-.07 .043l-.095 .071l-.058 .054l-4 4l-.083 .094a1 1 0 0 0 1.497 1.32l2.293 -2.293v5.586l.007 .117a1 1 0 0 0 1.993 -.117v-5.585l2.293 2.292l.094 .083a1 1 0 0 0 1.32 -1.497l-4 -4l-.082 -.073l-.089 -.064l-.113 -.062l-.081 -.034l-.113 -.034l-.112 -.02l-.098 -.006z" /></svg></a>
-        </div>
     </main>
-    <footer>
-        <div class="logo">
-            <a href="index.html" id="about-foot-logo">Aqua Pro</a>
+    <button class="go-up-btn" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" /></svg></button>
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4 class="footer__title">Інформація</h4>
+                <a href="about.html" class="footer__link">Про нас</a>
+                <a href="delivery.html" class="footer__link">Умови доставки</a>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Допомога</h4>
+                <a href="contacts.html" class="footer__link">Контакти</a>
+                <a href="questions.html" class="footer__link">Питання та відповіді</a>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Ми в соцмережах</h4>
+                <a href="https://www.instagram.com/" class="footer__link" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/" class="footer__link" target="_blank">Facebook</a>
+            </div>
         </div>
-        <div class="links">
-            <nav id="about-foot-nav">
-                <a href="about.html" id="about-text">Про нас</a> |
-                <a href="contacts.html" id="contacts-text">Контакти</a>
-            </nav>
-        </div>
-        <div class="copyright">
-            <p id="copyright-text">Олег Шеремет &copy; 2026</p>
+        <div class="footer__copy">
+            <p>Олег Шеремет &copy; 2026. Всі права захищені.</p>
         </div>
     </footer>
 </body>
