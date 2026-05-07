@@ -412,7 +412,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
 }
-.content-box__block div {
+.content-box__block > div {
     background: #fff;
     padding: 10px 20px;
     border-radius: 8px;
