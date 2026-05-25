@@ -20,7 +20,7 @@ body {
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 1fr repeat(2, auto) 1fr auto auto 1fr;
+    grid-template-columns: 1fr repeat(2, auto) 1fr repeat(2, auto) 1fr;
     grid-template-rows: auto;
     grid-template-areas: ". logo catalog search cart profile-button .";
     place-items: center;

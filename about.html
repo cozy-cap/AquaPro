@@ -12,10 +12,23 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp');
+        #jumping-img {
+            position: absolute;
+            width: 100px;
+        }
+        .wipeOutButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
     </style>
     <script src="script.js"></script>
 </head>
 <body id="top">
+    <img id="jumping-img" src="image/jumpingImage.jpg" alt="jumping image">
     <header class="header">
         <div class="header__logo">
             <a href="index.html" class="header__logo-link">
@@ -59,6 +72,7 @@
                 <div class="content-box__block-history">
                     <h3 class="content-box__block-history-title">Наша історія</h3>
                     <p class="content-box__block-history-title-content">Ми почали свій шлях у 2020 році...</p>
+                    <p>Працюємо вже <span id="clock">00:00:00</span></p>
                 </div>
                 <div class="content-box__block-pricips">
                     <h3 class="content-box__block-pricips-title">Наші принципи:</h3>
@@ -76,6 +90,8 @@
             </div>
         </article>
     </main>
+    <!--- Lab 3 --->
+    <button class="wipeOutButton" onclick="WipeOutElement('top')">Витерти сторінку</button>
     <button class="go-up-btn" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" /></svg></button>
     <footer class="footer">
         <div class="footer__grid">

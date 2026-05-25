@@ -7,19 +7,579 @@
     <meta name="author" content="Олег Шеремет">
     <meta name="description" content="Aqua Pro - Онлайн магазин найкращого приладдя для плавання.">
     <meta name="robots" content="index, follow">
-    <title>Aqua Pro - Умови доставки</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="image/drop.ico">
+    <title>Варіант 15</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+            "header"
+            "main"
+            "footer";
+            min-height: 100vh;
+        }
+        /* ---- HEADER ---- */
+        .header {
+            grid-area: header;
+            display: grid;
+            grid-template-columns: 1fr repeat(2, auto) 1fr repeat(2, auto) 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: ". logo catalog search cart profile-button .";
+            place-items: center;
+            gap: 10px;
+            padding: 20px 20px;
+            background: #333;
+            border-bottom: solid #59a3d4;
+            align-content: center;
+        }
+        /* --- Logo --- */
+        .header__logo {
+            grid-area: logo;
+            max-width: fit-content;
+        }
+        .header__logo-link {
+            text-decoration: none;
+        }
+        .header__logo-text {
+            font-family: "Tilt Warp", sans-serif;
+            font-size: 35px;
+            margin: 0px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .header__logo-text:hover {
+            color: #63acdd !important;
+        }
+        /* --- Catalog --- */
+        .header__catalog {
+            grid-area: catalog;
+            position: relative;
+        }
+        .header__catalog-label {
+            display: grid;
+            grid-template-columns: auto auto;
+            place-items: center;
+            height: 40px;
+            padding: 0px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .header__catalog-label:hover {
+            background: #474747;
+        }
+        .header__catalog-text {
+            font-size: 16pt;
+            color: #eeeeee;
+            margin: 0px;
+            margin-left: 5px;
+        }
+        .header__catalog-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 10px;
+            background-color: #fff;
+            list-style: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            min-width: 240px;
+            z-index: 100;
+        }
+        .header__catalog:hover .header__catalog-dropdown {
+            display: grid;
+            grid-template-rows: auto;
+            gap: 5px;
+        }
+        .header__catalog-button {
+            text-align: left;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            align-items: center;
+        }
+        .header__catalog-button:hover {
+            background-color: #eeeeee;
+            color: #59a3d4;
+        }
+        /* --- Search --- */
+        .header__search {
+            grid-area: search;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-areas: "search-input submit";
+            height: 40px;
+            width: 100%;
+        }
+        .header__search-input {
+            grid-area: search-input;
+            font-size: 14pt;
+            padding-left: 10px;
+            border-style: none;
+            border-radius: 10px 0px 0px 10px;
+            border: solid #59a3d400 2px;
+            vertical-align: bottom;
+            color: #333;
+            background: #eeeeee;
+        }
+        .header__search-input:focus {
+            border: solid #59a3d4 2px;
+            outline: none;
+        }
+        .header__search-submit {
+            grid-area: submit;
+            width: 40px;
+            border-radius: 0px 10px 10px 0px;
+            color: #333;
+            background: #59a3d4;
+            border-style: none;
+            cursor: pointer;
+            background-image: url(../image/search.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            vertical-align: bottom;
+        }
+        .header__search-submit:hover {
+            background: #67b2e4;
+            background-image: url(../image/search.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        /* --- Cart --- */
+        .header__cart {
+            grid-area: cart;
+            max-width: fit-content;
+        }
+        .header__cart-button {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: transparent;
+            border-style: none;
+            border-radius: 10px;
+        }
+        .header__cart-icon {
+            stroke: #eeeeee;
+            fill: none;
+        }
+        .header__cart-button:hover {
+            background: #474747;
+        }
+        /* --- Profile --- */
+        .header__profile {
+            grid-area: profile-button;
+            max-width: fit-content;
+            padding: 0px;
+            margin: 0px;
+        }
+        .header__profile-button {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-style: none;
+            background-image: url(../image/profile-image.jpg);
+            border-radius: 1000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* ---- MAIN ---- */
+        .checkout-container__desktop {
+            max-width: 1200px;
+            margin: 32px auto;
+            padding: 0 16px;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+        }
+        .checkout-mobile-block {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkout-top {
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+        }
+        .checkout-promocodes__mobile {
+            display: none;
+        }
+        /* ---- Main ---- */
+        .checkout-layout {
+            grid-area: main;
+        }
+        .checkout-main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        /* ---- Side ---- */
+        .checkout-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkout-container section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e9e9e9;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        /* ---- Order ---- */
+        .checkout-order__item {
+            margin-top: 10px;
+            border: 1px solid #59a3d4;
+            padding: 5px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            justify-content: space-between;
+        }
+        .checkout-order__item__price {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout-order__item__price-old {
+            font-size: smaller;
+            text-decoration: line-through;
+            color: #868686;
+        }
+        .checkout-order__item__price-final {
+            font-size: larger;
+            font-weight: bold;
+        }
+        .checkout-order__item__image {
+            width: 70px;
+        }
+        .checkout-order__mobile {
+            display: none;
+            margin-bottom: 24px;
+        }
+        .checkout-order__desktop {
+            display: block;
+        }
+        /* ---- Main ---- */
+        .checkout-promocodes,
+        .checkout-price,
+        .checkout-main {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkout-price {
+            max-width: 1168px; 
+            width: calc(100% - 32px); 
+            margin: 0 auto;
+        }
+        .checkout-main div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .checkout-main-payment__list,
+        .checkout-main-delivery__list {
+            list-style: none;
+        }
+        .checkout-main-payment__list-item,
+        .checkout-main-delivery__list-item {
+            margin: 5px 0px;
+        }
+        .checkout-main-reciever__form {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        .checkout-promocodes-body__input,
+        .checkout-main-reciever__form__input {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #333;
+            border-radius: 8px;
+            height: 40px;
+            padding: 10px;
+            font-size: 12pt;
+        }
+        .checkout-main-reciever__form-submit {
+            align-self: center;
+            width: 200px;
+            height: 40px;
+            background: #59a3d4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14pt;
+        }
+        .checkout-main-reciever__form-submit:hover {
+            background: #63acdd;
+        }
+        /* ---- Promocodes ---- */
+        .checkout-promocodes-body {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            
+        }
+        .checkout-promocodes-body__button {
+            align-self: center;
+            min-width: 90px;
+            height: 40px;
+            background: #59a3d4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14pt;
+        }
+        .checkout-promocodes-body__button {
+            background: #63acdd;
+        }
+        /* ---- Price ---- */
+        .checkout-price__button {
+            align-self: center;
+            min-width: 250px;
+            height: 40px;
+            background: #59a3d4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14pt;
+        }
+        .checkout-price__button:hover {
+            background: #63acdd;
+            color: white;
+        }
+        .checkout-price__table-row-item {
+            color: #33333393;
+        }
+        .checkout-price__table th {
+            text-align: right;
+        }
+        .checkout-price-final {
+            padding: 10px 0px;
+            border-top: 1px solid #59a3d4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .checkout-price-final-price {
+            font-size: x-large;
+            font-weight: bold;
+        }
+        /* ---- Titles ---- */
+        .checkout-main__title,
+        .checkout-order__title,
+        .checkout-promocodes__title,
+        .checkout-price__title {
+            margin-top: 0;
+            color: #333;
+        }
+        .checkout-main__title {
+            margin-bottom: 10px;
+        }
+        /* --- GoUpBtn --- */
+        .go-up-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: #59a3d4;
+            border-radius: 100%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 24px;
+            z-index: 1000;
+            transition: transform 0.4s ease, border-radius 0.4s ease;
+        }
+        .go-up-icon {
+            margin: 5px;
+            fill: white;
+            stroke: none;
+            }
+        .go-up-btn:hover {
+            transform: scale(1.2);
+        }
+        /* --- Footer --- */
+        .footer {
+            grid-area: footer;
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+        .footer__title {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .footer__link {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .footer__link:hover {
+            color: #fff;
+        }
+        .footer__copy {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+        /* ---- Optimise for mobile ---- */
+        @media (max-width: 760px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "sidebar"
+                    "products";
+            }
+            .header {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "logo logo logo"
+                    "search cart profile-button";
+                justify-content: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .header__catalog {
+                display: none;
+            }
+            .header__search-input {
+                width: 100%;
+                height: 30px;
+                border-radius: 8px;
+                margin-bottom: 5px;
+            }
+            .header__search-submit {
+                border-radius: 10px;
+            }
+            .header__search {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "search-input" 
+                    "submit";
+                height: auto;
+            }
+            .footer__grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .checkout-mobile-block {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .checkout-side {
+                display: none;
+            }
+            .checkout-container__desktop {
+                padding: 0;
+                margin: 0;
+                flex: 1;
+                min-width: 280px;
+            }
+            .checkout-price {
+                flex: 1;
+                width: auto;
+                margin: 0;
+                min-width: 280px; 
+            }
+            .checkout-container {
+                display: flex;
+                max-width: 1200px;
+                margin: 32px auto;
+                padding: 0 16px;
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .checkout-order__desktop {
+                display: none;
+            }
+            .checkout-order__mobile {
+                display: block;
+                margin: 0;
+                width: 100%;
+            }
+            .checkout-promocodes__desktop {
+                display: none;
+            }
+            .checkout-promocodes__mobile {
+                display: block;
+            }
+            .checkout-side section {
+                background-color: transparent;
+                padding: 0;
+                box-shadow: none;
+                border: none;
+
+            }
+            .checkout-side {
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 24px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+                border: 1px solid #e9e9e9;
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
     </style>
-    <script src="script.js"></script>
+    <script>
+        function topFunction() {
+            window.scrollTo({top: 0});
+        }
+    </script>
 </head>
 <body id="top">
-
     <header class="header">
         <div class="header__logo">
             <a href="index.html" class="header__logo-link">
-                <h1 class="header__logo-text">Aqua Pro</h1>
+                <h1 class="header__logo-text" style="color:#59a3d4">Aqua Pro</h1>
             </a>
         </div>
         <nav class="header__catalog">
@@ -51,6 +611,104 @@
             <button class="header__profile-button" onclick="location.href='profile.html';"></button>
         </div>
     </header>
+    <main class="checkout-layout">
+        <div class="checkout-container">
+                <section class="checkout-order__mobile">
+                    <h3 class="checkout-order__title">Ваші замовлення</h3>
+                    <div class="checkout-order__item">
+                        <img class="checkout-order__item__image" src="https://content.rozetka.com.ua/goods/images/big/620623253.jpg" alt="Рюкзак TYR">
+                        <span class="checkout-order__item__title">Рюкзак TYR Alli...</span>
+                        <div class="checkout-order__item__price">
+                            <span class="checkout-order__item__price-old">5 600 грн</span>
+                            <span class="checkout-order__item__price-new">4 200 грн x 1 од.</span>
+                        </div>
+                        <span class="checkout-order__item__price-final">4 200 грн</span>
+                    </div>
+                </section>
+                <div class="checkout-container__desktop">
+                    <div class="checkout-mobile-block">    
+                        <section class="checkout-promocodes__mobile">
+                            <h3 class="checkout-promocodes__title">Промокоди</h3>
+                            <div class="checkout-promocodes-body">
+                                <input type="text" placeholder="Промокод" class="checkout-promocodes-body__input">
+                                <button class="checkout-promocodes-body__button" type="submit">Додати</button>
+                            </div>
+                        </section>
+                        <section class="checkout-main">
+                            <h2 class="checkout-main__title">Оформлення замовлення</h2>
+                            <div class="checkout-main-delivery">
+                                <h3 class="checkout-main-delivery__title">Доставка</h3>
+                                <ul class="checkout-main-delivery__list">
+                                    <li class="checkout-main-delivery__list-item"><input type="radio" name="checkout-main-delivery__list" class="checkout-main-delivery__list-item-radio">Самовивіз з наших магазинів</input></li>
+                                    <li class="checkout-main-delivery__list-item"><input type="radio" name="checkout-main-delivery__list" class="checkout-main-delivery__list-item-radio">Самовивіз з Нової Пошти</input></li>
+                                    <li class="checkout-main-delivery__list-item"><input type="radio" name="checkout-main-delivery__list" class="checkout-main-delivery__list-item-radio">Самовивіз з поштоматів Нової Пошти</input></li>
+                                    <li class="checkout-main-delivery__list-item"><input type="radio" name="checkout-main-delivery__list" class="checkout-main-delivery__list-item-radio">Самовивіз з УКРПОШТИ</input></li>
+                                    <li class="checkout-main-delivery__list-item"><input type="radio" name="checkout-main-delivery__list" class="checkout-main-delivery__list-item-radio">Кур'єр Нової Пошти</input></li>
+                                </ul>
+                            </div>
+                            <div class="checkout-main-payment">
+                                <h3 class="checkout-main-payment__title">Оплата</h3>    
+                                <ul class="checkout-main-payment__list">
+                                    <li class="checkout-main-payment__list-item"><input type="radio" name="checkout-main-payment__list" class="checkout-main-payment__list-item-radio">Оплата під час отримання товару</input></li>
+                                    <li class="checkout-main-payment__list-item"><input type="radio" name="checkout-main-payment__list" class="checkout-main-payment__list-item-radio">Передплата на IBAN</input></li>
+                                </ul>
+                            </div>
+                            <div class="checkout-main-reciever">
+                                <h3 class="checkout-main-reciever__title">Отримувач</h3>
+                                <form class="checkout-main-reciever__form">
+                                    <input type="text" placeholder="Прізвище" class="checkout-main-reciever__form__input">
+                                    <input type="text" placeholder="Ім'я" class="checkout-main-reciever__form__input">
+                                    <input type="text" placeholder="Побатькові" class="checkout-main-reciever__form__input">
+                                    <input type="tel" placeholder="Телефон" class="checkout-main-reciever__form__input">
+                                </form>
+                                <button class="checkout-main-reciever__form-submit" type="submit">Підтвердити</button>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="checkout-side">
+                        
+                        <section class="checkout-order__desktop">
+                            <h3 class="checkout-order__title">Ваші замовлення</h3>
+                            <div class="checkout-order__item">
+                                <img class="checkout-order__item__image" src="https://content.rozetka.com.ua/goods/images/big/620623253.jpg" alt="Рюкзак TYR">
+                                <span class="checkout-order__item__title">Рюкзак TYR Alli...</span>
+                                <div class="checkout-order__item__price">
+                                    <span class="checkout-order__item__price-old">5 600 грн</span>
+                                    <span class="checkout-order__item__price-new">4 200 грн x 1 од.</span>
+                                </div>
+                                <span class="checkout-order__item__price-final">4 200 грн</span>
+                            </div>
+                        </section>
+                        <section class="checkout-promocodes__desktop">
+                            <h3 class="checkout-promocodes__title">Промокоди</h3>
+                            <div class="checkout-promocodes-body">
+                                <input type="text" placeholder="Промокод" class="checkout-promocodes-body__input">
+                                <button class="checkout-promocodes-body__button" type="submit">Додати</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <section class="checkout-price">
+                        <h3 class="checkout-price__title">Разом</h3>
+                        <table class="checkout-price__table">
+                            <tr class="checkout-price__table-row">
+                                <td class="checkout-price__table-row-item">1 товар на суму</td>
+                                <th class="checkout-price__table-row-item">4 200 грн</td>
+                            </tr>
+                            <tr class="checkout-price__table-row">
+                                <td class="checkout-price__table-row-item">Вартість доставки</td>
+                                <th class="checkout-price__table-row-item">за тарифами перевізника</td>
+                            </tr>
+                        </table>
+                        <div class="checkout-price-final">
+                            <span class="checkout-price-final-text">До сплати</span>
+                            <span class="checkout-price-final-price">4 200 грн</span>
+                        </div>
+                        <button class="checkout-price__button" type="submit">Підтвердити замовлення</button>
+                    </section>
+            </div>
+        </div>
+    </main>
     <button class="go-up-btn" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor" class="go-up-icon"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" /></svg></button>
     <footer class="footer">
         <div class="footer__grid">
