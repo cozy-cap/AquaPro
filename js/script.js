@@ -63,7 +63,6 @@ function WipeOutElement(targetId) {
   }, 15);
 }
 
-//Results
 document.addEventListener("DOMContentLoaded", function() {
   //1
   if (document.querySelector(".promo-banner")) {
